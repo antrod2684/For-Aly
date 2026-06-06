@@ -93,25 +93,21 @@
 
   .seal-wrap {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
     transition: transform 0.35s ease, filter 0.35s ease;
     filter: drop-shadow(0 4px 20px rgba(0,0,0,0.7)) drop-shadow(0 0 22px rgba(15,74,42,0.4));
   }
-
   .envelope:hover .seal-wrap {
     transform: translate(-50%, -50%) scale(1.06);
     filter: drop-shadow(0 6px 24px rgba(0,0,0,0.7)) drop-shadow(0 0 32px rgba(15,74,42,0.55));
   }
-
   .seal-svg { width: 88px; height: 88px; }
 
   .envelope-address {
     position: absolute;
-    bottom: 1.8rem;
-    left: 2.2rem;
+    bottom: 1.8rem; left: 2.2rem;
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 300;
@@ -141,7 +137,6 @@
   .envelope-hint { font-family: var(--font-display); font-size: 0.76rem; color: var(--text-faint); letter-spacing: 0.16em; text-transform: uppercase; transition: color 0.3s ease; margin-top: -1rem; }
   .envelope-wrapper:hover .envelope-hint { color: var(--text-muted); }
 
-  /* LETTER */
   .letter-overlay {
     display: none;
     position: fixed;
@@ -208,24 +203,10 @@
   .letter-closing.visible { opacity:1; transform:translateY(0); }
   .letter-closing .name { font-size: clamp(1.4rem,3vw,1.75rem); font-weight: 300; display: block; margin-top: 0.2rem; color: #0a3020; }
 
-  /* Divider */
-  .letter-divider {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(15,74,42,0.3), transparent);
-    margin: 2rem auto;
-    opacity: 0;
-    transition: opacity 1s ease 0.4s;
-  }
+  .letter-divider { width: 60px; height: 1px; background: linear-gradient(to right, transparent, rgba(15,74,42,0.3), transparent); margin: 2rem auto; opacity: 0; transition: opacity 1s ease 0.4s; }
   .letter-divider.visible { opacity: 1; }
 
-  /* Spotify button */
-  .spotify-wrap {
-    text-align: center;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
-  }
+  .spotify-wrap { text-align: center; opacity: 0; transform: translateY(10px); transition: opacity 1s ease 0.6s, transform 1s ease 0.6s; }
   .spotify-wrap.visible { opacity: 1; transform: translateY(0); }
 
   .spotify-btn {
@@ -245,23 +226,9 @@
     cursor: pointer;
     transition: all 0.25s ease;
   }
-  .spotify-btn:hover {
-    background: rgba(15,74,42,0.07);
-    border-color: rgba(15,74,42,0.55);
-    color: rgba(15,60,30,0.95);
-  }
+  .spotify-btn:hover { background: rgba(15,74,42,0.07); border-color: rgba(15,74,42,0.55); color: rgba(15,60,30,0.95); }
   .spotify-btn svg { flex-shrink: 0; }
-
-  .spotify-label {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 0.72rem;
-    font-style: normal;
-    color: rgba(20,60,35,0.35);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 0.6rem;
-  }
+  .spotify-label { display: block; font-family: var(--font-display); font-size: 0.72rem; font-style: normal; color: rgba(20,60,35,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.6rem; }
 
   .close-btn {
     position: fixed;
@@ -339,7 +306,6 @@
     <div class="corner corner-tr"></div>
     <div class="corner corner-bl"></div>
     <div class="corner corner-br"></div>
-
     <div class="letter-content">
       <span class="letter-date">June 5th &nbsp;&mdash;&nbsp; One Month</span>
       <div class="letter-salutation">To Aly,</div>
@@ -369,11 +335,11 @@
 
 <script>
   var paragraphs = [
-    "I tell you this every day, and I don’t intend on ever stopping. I’m going to say it again today, but with a little more of my mind behind it.",
-    "I love you. I love your voice. I love your laugh. I love the way you talk, the way you see the world. I love your smile. I love how absolutely gorgeous you are. I could go on for so long. I just think you are breathtaking.",
-    "The moment we started talking, I felt something I hadn’t quite felt before. This deep sense of being seen. And at the same time, this intense fascination, like I had been searching for something deep down, and I finally found you. Even though we didn’t know each other right away, it felt like we did. There was this light, this magnetism, that I had to explore. And I could just tell you felt the same way.",
-    "That feeling is love. But it’s so much more than that, and it continues to grow. That magnetism went from this high, this fire of attraction, and turned into a realization of something deep and passionate. Now it’s evolved into all of that, but with a quiet assuredness underneath it. Because there’s commitment now. To you. To us.",
-    "Deep in my body, in my heart, in my whole soul, I feel that you are the love of my life. I want to build a life with you and turn it into something that feels truly ours. You are my north star. You give me hope. You give my life light. You are my world."
+    "I tell you pieces of this every day, but I want to say it all at once today…",
+    "I love you. I love your voice. I love your laugh. I love the way you talk, the way you see the world. I love your smile. I love how absolutely gorgeous you are. I could go on for so long. I just think that you are breathtaking.",
+    "The moment we started talking, I felt something I had never felt before. This deep sense of being seen. At the same time, I felt this seemingly boundless fascination. Like I had been searching for someone or something all of my life, and I had finally found it. It was you. Even though we had just met, it felt like we had always known each other. There was this light, this magnetism, that I just had to explore. I could tell you felt the same way.",
+    "That feeling is love, but it’s also so much more than that. It’s gone from this high, this fiery attraction and solidified into this deep passion. Now, while still being that… There’s a quiet assuredness underneath it. Because there’s commitment now. To you. To us.",
+    "Deep in my body, in my heart, in my whole soul, I feel that you are the love of my life. I want to build this into something that feels truly ours. You are my north star. You give me hope. You give my life light. You are my world."
   ];
 
   var CHAR_SPEED = 48;
@@ -413,7 +379,7 @@
         el.insertBefore(document.createTextNode(text[i]), cursor);
         i++;
         var delay = CHAR_SPEED + (Math.random() * 18 - 9);
-        if (",;:.!?".indexOf(text[i-1]) !== -1) delay += 160 + Math.random() * 100;
+        if (",;:.!?…".indexOf(text[i-1]) !== -1) delay += 160 + Math.random() * 100;
         if (text[i-1] === " " && Math.random() < 0.08) delay += 80;
         setTimeout(next, delay);
       } else { if (cb) cb(); }
