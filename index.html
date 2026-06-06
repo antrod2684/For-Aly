@@ -17,7 +17,6 @@
     --emerald: #0f4a2a;
     --emerald-mid: #165e36;
     --emerald-deep: #0a3320;
-    --emerald-text: #5a9e78;
     --gold: #a07830;
     --text: #c8ddd0;
     --text-muted: #5a8a6e;
@@ -65,22 +64,15 @@
     border-radius: 3px;
     cursor: pointer;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    box-shadow:
-      0 8px 40px rgba(0,0,0,0.75),
-      0 0 0 1px rgba(15,74,42,0.05),
-      inset 0 1px 0 rgba(255,255,255,0.02);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.75), 0 0 0 1px rgba(15,74,42,0.05), inset 0 1px 0 rgba(255,255,255,0.02);
     overflow: hidden;
   }
 
   .envelope:hover {
     transform: translateY(-5px);
-    box-shadow:
-      0 20px 60px rgba(0,0,0,0.8),
-      0 0 35px rgba(15,74,42,0.1),
-      0 0 0 1px rgba(20,60,35,0.18);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 35px rgba(15,74,42,0.1), 0 0 0 1px rgba(20,60,35,0.18);
   }
 
-  /* V-fold crease lines */
   .envelope::before {
     content: "";
     position: absolute;
@@ -99,7 +91,6 @@
     pointer-events: none;
   }
 
-  /* ── HEART SEAL ── */
   .seal-wrap {
     position: absolute;
     top: 50%;
@@ -115,12 +106,8 @@
     filter: drop-shadow(0 6px 24px rgba(0,0,0,0.7)) drop-shadow(0 0 32px rgba(15,74,42,0.55));
   }
 
-  .seal-svg {
-    width: 88px;
-    height: 88px;
-  }
+  .seal-svg { width: 88px; height: 88px; }
 
-  /* Address */
   .envelope-address {
     position: absolute;
     bottom: 1.8rem;
@@ -133,66 +120,28 @@
     line-height: 1.4;
     z-index: 2;
   }
-  .envelope-address .aly {
-    display: block;
-    font-size: 1.1rem;
-    color: rgba(140,195,165,0.6);
-  }
-  .envelope-address .date {
-    display: block;
-    font-size: 0.76rem;
-    color: var(--text-faint);
-    letter-spacing: 0.1em;
-    font-style: normal;
-    text-transform: uppercase;
-    margin-top: 0.1rem;
-  }
+  .envelope-address .aly { display: block; font-size: 1.1rem; color: rgba(140,195,165,0.6); }
+  .envelope-address .date { display: block; font-size: 0.76rem; color: var(--text-faint); letter-spacing: 0.1em; font-style: normal; text-transform: uppercase; margin-top: 0.1rem; }
 
-  /* Postmark */
   .postmark {
     position: absolute;
-    top: 1.4rem;
-    right: 1.8rem;
-    width: 50px;
-    height: 50px;
+    top: 1.4rem; right: 1.8rem;
+    width: 50px; height: 50px;
     border: 1.5px solid rgba(20,60,35,0.25);
     border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; justify-content: center;
     z-index: 2;
   }
-  .postmark::before, .postmark::after {
-    content: "";
-    position: absolute;
-    left: -8px; right: -8px;
-    height: 1px;
-    background: rgba(20,60,35,0.18);
-  }
+  .postmark::before, .postmark::after { content: ""; position: absolute; left: -8px; right: -8px; height: 1px; background: rgba(20,60,35,0.18); }
   .postmark::before { top: 30%; }
   .postmark::after  { top: 70%; }
-  .postmark-inner {
-    font-family: var(--font-display);
-    font-size: 0.58rem;
-    color: var(--text-faint);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.4;
-  }
+  .postmark-inner { font-family: var(--font-display); font-size: 0.58rem; color: var(--text-faint); letter-spacing: 0.1em; text-transform: uppercase; text-align: center; line-height: 1.4; }
 
-  .envelope-hint {
-    font-family: var(--font-display);
-    font-size: 0.76rem;
-    color: var(--text-faint);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-    margin-top: -1rem;
-  }
+  .envelope-hint { font-family: var(--font-display); font-size: 0.76rem; color: var(--text-faint); letter-spacing: 0.16em; text-transform: uppercase; transition: color 0.3s ease; margin-top: -1rem; }
   .envelope-wrapper:hover .envelope-hint { color: var(--text-muted); }
 
-  /* ── LETTER ── */
+  /* LETTER */
   .letter-overlay {
     display: none;
     position: fixed;
@@ -226,110 +175,92 @@
     content: "";
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(ellipse 70% 40% at 90% 10%, rgba(15,74,42,0.04) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 50% at 10% 90%, rgba(80,50,110,0.03) 0%, transparent 60%);
+    background: radial-gradient(ellipse 70% 40% at 90% 10%, rgba(15,74,42,0.04) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(80,50,110,0.03) 0%, transparent 60%);
     pointer-events: none;
   }
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-  .letter-inner-border {
-    position: absolute;
-    inset: 14px;
-    border: 1px solid rgba(15,74,42,0.13);
-    pointer-events: none;
-    border-radius: 1px;
-    z-index: 1;
-  }
+  .letter-inner-border { position: absolute; inset: 14px; border: 1px solid rgba(15,74,42,0.13); pointer-events: none; border-radius: 1px; z-index: 1; }
   .corner { position: absolute; width: 22px; height: 22px; z-index: 2; }
   .corner-tl { top:14px;left:14px; border-top:1.5px solid rgba(15,74,42,0.25); border-left:1.5px solid rgba(15,74,42,0.25); }
   .corner-tr { top:14px;right:14px; border-top:1.5px solid rgba(15,74,42,0.25); border-right:1.5px solid rgba(15,74,42,0.25); }
   .corner-bl { bottom:14px;left:14px; border-bottom:1.5px solid rgba(15,74,42,0.25); border-left:1.5px solid rgba(15,74,42,0.25); }
   .corner-br { bottom:14px;right:14px; border-bottom:1.5px solid rgba(15,74,42,0.25); border-right:1.5px solid rgba(15,74,42,0.25); }
-  .corner::before {
-    content:""; position:absolute;
-    width:5px; height:5px;
-    background:radial-gradient(circle, rgba(15,74,42,0.5), rgba(15,74,42,0.15));
-    border-radius:50%;
-  }
-  .corner-tl::before{top:-3px;left:-3px;}
-  .corner-tr::before{top:-3px;right:-3px;}
-  .corner-bl::before{bottom:-3px;left:-3px;}
-  .corner-br::before{bottom:-3px;right:-3px;}
+  .corner::before { content:""; position:absolute; width:5px; height:5px; background:radial-gradient(circle, rgba(15,74,42,0.5), rgba(15,74,42,0.15)); border-radius:50%; }
+  .corner-tl::before{top:-3px;left:-3px;} .corner-tr::before{top:-3px;right:-3px;}
+  .corner-bl::before{bottom:-3px;left:-3px;} .corner-br::before{bottom:-3px;right:-3px;}
 
   .letter-content { position: relative; z-index: 3; }
 
-  .letter-date {
-    font-family: var(--font-display);
-    font-size: 0.8rem;
-    color: rgba(20,60,35,0.4);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 2.2rem;
-    display: block;
-  }
+  .letter-date { font-family: var(--font-display); font-size: 0.8rem; color: rgba(20,60,35,0.4); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 2.2rem; display: block; }
+  .letter-salutation { font-family: var(--font-display); font-size: clamp(1.5rem,3.5vw,2.1rem); font-style: italic; font-weight: 300; color: #0a3020; margin-bottom: 1.8rem; line-height: 1.3; }
 
-  .letter-salutation {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem,3.5vw,2.1rem);
-    font-style: italic;
-    font-weight: 300;
-    color: #0a3020;
-    margin-bottom: 1.8rem;
-    line-height: 1.3;
-  }
-
-  .letter-body {
-    font-family: var(--font-body);
-    font-size: clamp(1rem,1.8vw,1.08rem);
-    line-height: 1.92;
-    color: #2a2820;
-    min-height: 2em;
-  }
+  .letter-body { font-family: var(--font-body); font-size: clamp(1rem,1.8vw,1.08rem); line-height: 1.92; color: #2a2820; min-height: 2em; }
   .letter-body p { margin-bottom: 1.4rem; text-wrap: pretty; }
   .letter-body p:last-of-type { margin-bottom: 2.6rem; }
-  .letter-body p.drop-cap::first-letter {
-    font-family: var(--font-display);
-    font-size: 3.1em;
-    font-style: italic;
-    float: left;
-    line-height: 0.76;
-    margin: 0.1em 0.08em 0 0;
-    color: #0a3020;
-  }
+  .letter-body p.drop-cap::first-letter { font-family: var(--font-display); font-size: 3.1em; font-style: italic; float: left; line-height: 0.76; margin: 0.1em 0.08em 0 0; color: #0a3020; }
 
-  .cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1.1em;
-    background: #0f4a2a;
-    margin-left: 2px;
-    vertical-align: text-bottom;
-    animation: blink 0.75s step-end infinite;
-  }
+  .cursor { display: inline-block; width: 2px; height: 1.1em; background: #0f4a2a; margin-left: 2px; vertical-align: text-bottom; animation: blink 0.75s step-end infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
   .cursor.hidden { display: none; }
 
-  .letter-closing {
-    font-family: var(--font-display);
-    font-size: clamp(1rem,2vw,1.15rem);
-    font-style: italic;
-    color: #1a1612;
-    line-height: 1.6;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
+  .letter-closing { font-family: var(--font-display); font-size: clamp(1rem,2vw,1.15rem); font-style: italic; color: #1a1612; line-height: 1.6; opacity: 0; transform: translateY(8px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .letter-closing.visible { opacity:1; transform:translateY(0); }
-  .letter-closing .name {
-    font-size: clamp(1.4rem,3vw,1.75rem);
-    font-weight: 300;
+  .letter-closing .name { font-size: clamp(1.4rem,3vw,1.75rem); font-weight: 300; display: block; margin-top: 0.2rem; color: #0a3020; }
+
+  /* Divider */
+  .letter-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(15,74,42,0.3), transparent);
+    margin: 2rem auto;
+    opacity: 0;
+    transition: opacity 1s ease 0.4s;
+  }
+  .letter-divider.visible { opacity: 1; }
+
+  /* Spotify button */
+  .spotify-wrap {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
+  }
+  .spotify-wrap.visible { opacity: 1; transform: translateY(0); }
+
+  .spotify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1.4rem;
+    background: transparent;
+    border: 1px solid rgba(15,74,42,0.35);
+    border-radius: 2px;
+    color: rgba(20,60,35,0.7);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .spotify-btn:hover {
+    background: rgba(15,74,42,0.07);
+    border-color: rgba(15,74,42,0.55);
+    color: rgba(15,60,30,0.95);
+  }
+  .spotify-btn svg { flex-shrink: 0; }
+
+  .spotify-label {
     display: block;
-    margin-top: 0.2rem;
-    color: #0a3020;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-style: normal;
+    color: rgba(20,60,35,0.35);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.6rem;
   }
 
   .close-btn {
@@ -348,30 +279,13 @@
     transition: all 0.2s ease;
     backdrop-filter: blur(8px);
   }
-  .close-btn:hover {
-    background: rgba(15,74,42,0.2);
-    color: rgba(140,195,165,0.85);
-    border-color: rgba(15,74,42,0.4);
-  }
+  .close-btn:hover { background: rgba(15,74,42,0.2); color: rgba(140,195,165,0.85); border-color: rgba(15,74,42,0.4); }
 
   .particles { position:fixed; inset:0; pointer-events:none; z-index:99; overflow:hidden; }
-  .particle {
-    position: absolute;
-    bottom: -20px;
-    opacity: 0;
-    animation: floatUp var(--dur,4s) ease-in forwards;
-    animation-delay: var(--delay,0s);
-  }
-  @keyframes floatUp {
-    0%   { opacity:0; transform:translateY(0) rotate(0deg) scale(0.4); }
-    10%  { opacity:0.6; }
-    80%  { opacity:0.15; }
-    100% { opacity:0; transform:translateY(-105vh) rotate(360deg) scale(1.1); }
-  }
+  .particle { position:absolute; bottom:-20px; opacity:0; animation:floatUp var(--dur,4s) ease-in forwards; animation-delay:var(--delay,0s); }
+  @keyframes floatUp { 0%{opacity:0;transform:translateY(0) rotate(0deg) scale(0.4)} 10%{opacity:0.6} 80%{opacity:0.15} 100%{opacity:0;transform:translateY(-105vh) rotate(360deg) scale(1.1)} }
 
-  @media (max-width:480px) {
-    .letter-inner-border,.corner,.postmark { display:none; }
-  }
+  @media (max-width:480px) { .letter-inner-border,.corner,.postmark{display:none} }
 </style>
 </head>
 <body>
@@ -380,8 +294,6 @@
 
 <div class="envelope-wrapper">
   <div class="envelope" id="envelope" onclick="openLetter()" role="button" tabindex="0" aria-label="Open love letter for Aly">
-
-    <!-- Heart wax seal -->
     <div class="seal-wrap">
       <svg class="seal-svg" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -395,74 +307,19 @@
             <stop offset="0%"   stop-color="rgba(255,255,255,0.18)"/>
             <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
           </radialGradient>
-          <!-- wax drip texture around the heart -->
           <radialGradient id="dripGrad" cx="50%" cy="50%" r="50%">
             <stop offset="0%"   stop-color="#165e36"/>
             <stop offset="60%"  stop-color="#0d4828"/>
             <stop offset="100%" stop-color="#072814"/>
           </radialGradient>
         </defs>
-
-        <!-- Wax drip base — irregular blob behind the heart -->
-        <path d="M44 8
-          C50 6, 60 7, 66 12
-          C72 17, 76 20, 79 26
-          C83 34, 83 40, 82 47
-          C81 54, 78 60, 74 65
-          C70 70, 65 75, 60 78
-          C55 81, 50 83, 44 83
-          C38 83, 33 81, 28 78
-          C23 75, 18 70, 14 65
-          C10 60, 7 54, 6 47
-          C5 40, 5 34, 9 26
-          C12 20, 16 17, 22 12
-          C28 7, 38 10, 44 8 Z"
-          fill="url(#dripGrad)"
-          opacity="0.5"/>
-
-        <!-- Heart shape -->
-        <path d="M44 72
-          C44 72, 14 52, 14 34
-          C14 24, 22 18, 30 18
-          C36 18, 41 21, 44 26
-          C47 21, 52 18, 58 18
-          C66 18, 74 24, 74 34
-          C74 52, 44 72, 44 72 Z"
-          fill="url(#heartGrad)"/>
-
-        <!-- Shine on heart -->
-        <path d="M44 72
-          C44 72, 14 52, 14 34
-          C14 24, 22 18, 30 18
-          C36 18, 41 21, 44 26
-          C47 21, 52 18, 58 18
-          C66 18, 74 24, 74 34
-          C74 52, 44 72, 44 72 Z"
-          fill="url(#heartShine)"/>
-
-        <!-- Inner highlight stroke -->
-        <path d="M44 66
-          C44 66, 18 49, 18 34
-          C18 26, 24 22, 30 22
-          C36 22, 41 25, 44 30
-          C47 25, 52 22, 58 22
-          C64 22, 70 26, 70 34
-          C70 49, 44 66, 44 66 Z"
-          fill="none"
-          stroke="rgba(255,255,255,0.09)"
-          stroke-width="0.8"/>
-
-        <!-- A monogram -->
-        <text x="44" y="52"
-          font-family="Cormorant Garamond, Georgia, serif"
-          font-size="20"
-          font-style="italic"
-          font-weight="400"
-          text-anchor="middle"
-          fill="rgba(210,240,225,0.82)">A</text>
+        <path d="M44 8 C50 6,60 7,66 12 C72 17,76 20,79 26 C83 34,83 40,82 47 C81 54,78 60,74 65 C70 70,65 75,60 78 C55 81,50 83,44 83 C38 83,33 81,28 78 C23 75,18 70,14 65 C10 60,7 54,6 47 C5 40,5 34,9 26 C12 20,16 17,22 12 C28 7,38 10,44 8 Z" fill="url(#dripGrad)" opacity="0.5"/>
+        <path d="M44 72 C44 72,14 52,14 34 C14 24,22 18,30 18 C36 18,41 21,44 26 C47 21,52 18,58 18 C66 18,74 24,74 34 C74 52,44 72,44 72 Z" fill="url(#heartGrad)"/>
+        <path d="M44 72 C44 72,14 52,14 34 C14 24,22 18,30 18 C36 18,41 21,44 26 C47 21,52 18,58 18 C66 18,74 24,74 34 C74 52,44 72,44 72 Z" fill="url(#heartShine)"/>
+        <path d="M44 66 C44 66,18 49,18 34 C18 26,24 22,30 22 C36 22,41 25,44 30 C47 25,52 22,58 22 C64 22,70 26,70 34 C70 49,44 66,44 66 Z" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+        <text x="44" y="52" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-style="italic" font-weight="400" text-anchor="middle" fill="rgba(210,240,225,0.82)">A</text>
       </svg>
     </div>
-
     <div class="envelope-address">
       <span class="aly">For Aly</span>
       <span class="date">June 5th</span>
@@ -474,7 +331,6 @@
   <div class="envelope-hint">tap to open</div>
 </div>
 
-<!-- LETTER -->
 <div class="letter-overlay" id="letterOverlay">
   <button class="close-btn" onclick="closeLetter()" aria-label="Close letter">&#x2715;</button>
   <div class="letter-page">
@@ -494,6 +350,19 @@
         Yours,
         <span class="name">Anthony</span>
       </div>
+      <div class="letter-divider" id="letterDivider"></div>
+      <div class="spotify-wrap" id="spotifyWrap">
+        <a class="spotify-btn" href="https://open.spotify.com/playlist/1n0woOMQS2g8E4aBiXzWEu?si=057b304c231044bf" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" stroke="rgba(15,74,42,0.6)" stroke-width="1.2"/>
+            <path d="M7 9.5C9.8 8.2 14.5 8.5 17 10.2" stroke="rgba(15,74,42,0.8)" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M7.5 12.2C9.8 11.1 13.8 11.3 16 12.8" stroke="rgba(15,74,42,0.7)" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M8 14.8C9.8 13.9 13 14.1 15 15.3" stroke="rgba(15,74,42,0.6)" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          listen to our playlist
+        </a>
+        <span class="spotify-label">a little something for you</span>
+      </div>
     </div>
   </div>
 </div>
@@ -512,18 +381,14 @@
   var body = document.getElementById("letterBody");
   var cursor = document.getElementById("cursor");
   var closing = document.getElementById("letterClosing");
+  var divider = document.getElementById("letterDivider");
+  var spotifyWrap = document.getElementById("spotifyWrap");
   var typingActive = false;
 
   function spawnParticles() {
     var container = document.getElementById("particles");
     var symbols = ["♥","♡","♦","·","✧"];
-    var colors = [
-      "rgba(22,94,54,0.7)",
-      "rgba(15,74,42,0.55)",
-      "rgba(160,120,48,0.45)",
-      "rgba(100,60,140,0.35)",
-      "rgba(180,220,200,0.35)"
-    ];
+    var colors = ["rgba(22,94,54,0.7)","rgba(15,74,42,0.55)","rgba(160,120,48,0.45)","rgba(100,60,140,0.35)","rgba(180,220,200,0.35)"];
     for (var i = 0; i < 22; i++) {
       (function() {
         var p = document.createElement("span");
@@ -551,9 +416,7 @@
         if (",;:.!?".indexOf(text[i-1]) !== -1) delay += 160 + Math.random() * 100;
         if (text[i-1] === " " && Math.random() < 0.08) delay += 80;
         setTimeout(next, delay);
-      } else {
-        if (cb) cb();
-      }
+      } else { if (cb) cb(); }
     }
     next();
   }
@@ -562,7 +425,13 @@
     if (!typingActive) return;
     if (idx >= paragraphs.length) {
       cursor.classList.add("hidden");
-      setTimeout(function() { closing.classList.add("visible"); }, 500);
+      setTimeout(function() {
+        closing.classList.add("visible");
+        setTimeout(function() {
+          divider.classList.add("visible");
+          spotifyWrap.classList.add("visible");
+        }, 800);
+      }, 500);
       return;
     }
     var p = document.createElement("p");
@@ -587,9 +456,7 @@
     document.body.style.overflow = "hidden";
     spawnParticles();
     startTyping();
-    setTimeout(function() {
-      overlay.querySelector(".close-btn").focus();
-    }, 800);
+    setTimeout(function() { overlay.querySelector(".close-btn").focus(); }, 800);
   }
 
   function closeLetter() {
@@ -603,6 +470,8 @@
         body.appendChild(cursor);
         cursor.classList.remove("hidden");
         closing.classList.remove("visible");
+        divider.classList.remove("visible");
+        spotifyWrap.classList.remove("visible");
         typingActive = false;
       }
     }, 400);
